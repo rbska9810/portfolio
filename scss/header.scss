@@ -1,0 +1,133 @@
+@import "variables";
+
+.header {
+  width: 100%;
+  max-width: 1980px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .dark-mode-btn {
+    width: 110px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    margin-left: 26px;
+    margin-right: auto;
+    border-radius: 50px;
+    font-family: $font-en;
+    font-size: 12px;
+    padding: 0 3px;
+    cursor: pointer;
+    position: relative;
+
+    .mode-title {
+      position: absolute;
+    }
+
+    .mode-icon {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .black-mode-icon {
+        stroke: $white;
+      }
+    }
+  }
+
+  .gnb {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-en;
+    font-size: 1.25rem;
+
+    a {
+      display: block;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0.3rem 0;
+
+      &.on {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background-color: $point-color;
+        transition: .2s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .trigger {
+    display: none;
+    width: 50px;
+    height: 34px;
+    position: relative;
+
+    &.on {
+      span {
+
+        &:nth-child(1) {
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          bottom: 50%;
+          transform: translateY(50%) rotate(-45deg);
+        }
+      }
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      border-radius: 50px;
+      transition: all .3s;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+      }
+    }
+  }
+}

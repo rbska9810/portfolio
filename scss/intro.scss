@@ -1,0 +1,269 @@
+@import "variables";
+
+.intro {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  overflow: hidden;
+
+  .intro-bg {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+
+  .intro-left {
+    &.on {
+      .intro-title {
+        opacity: 1;
+        transform: translate(0);
+
+        span::after {
+          width: 100%;
+        }
+      }
+
+      p {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+
+    .intro-title {
+      font-size: 2.5rem;
+      margin-bottom: 115px;
+      transition-property: opacity, transform;
+      transition-duration: 1s;
+      transform: translate(-50px);
+      opacity: 0;
+
+      >div {
+        display: inline;
+      }
+
+      b {
+        position: relative;
+        font-weight: 900;
+
+        &::after {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: $point-color;
+          position: absolute;
+          border-radius: 50%;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: intro-title infinite 1s;
+        }
+
+        @keyframes intro-title {
+          0% {
+            transform: translateX(-50%);
+          }
+
+          50% {
+            transform: translate(-50%, -10px);
+          }
+
+          100% {
+            transform: translate(-50%, 0px);
+          }
+
+        }
+      }
+
+      span {
+        position: relative;
+        font-weight: 900;
+
+        &::after {
+          content: '';
+          width: 0;
+          height: 4px;
+          position: absolute;
+          background-color: $point-color;
+          left: 0;
+          top: 100%;
+          border-radius: 10px;
+          transition: 1s;
+          transition-delay: 1s;
+        }
+      }
+    }
+
+    p {
+      font-family: $font-en;
+      font-size: 2.25rem;
+      text-align: right;
+      font-weight: 700;
+      line-height: 1.5;
+      transition-property: opacity, transform;
+      transition-duration: 1s;
+      opacity: 0;
+      transform: translateY(100px);
+      transition-delay: 1.5s;
+
+      &:last-child {
+        transition-delay: 1.7s;
+      }
+    }
+  }
+
+  .intro-right {
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+    transition-delay: 2s;
+
+    &.on {
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    .intro-icon {
+      .wok-pan {
+        width: 785px;
+        height: 616px;
+        animation: wok-move infinite 3s;
+
+        @keyframes wok-move {
+          5% {
+            transform: translateX(-20px);
+          }
+
+          10% {
+            transform: translateX(30px);
+          }
+
+        }
+      }
+
+      .wok-shadow {
+        position: absolute;
+        left: 20%;
+        bottom: 0;
+      }
+
+      .icon-logo-wrap {
+        position: absolute;
+        top: 0%;
+        border-radius: 50%;
+        width: 450px;
+        height: 500px;
+        animation: icon-wrap-move infinite 3s;
+
+        @keyframes icon-wrap-move {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        svg {
+          position: absolute;
+          bottom: 4%;
+          left: 25%;
+          opacity: 0;
+          animation: icon-move infinite 3s;
+
+          @keyframes icon-move {
+            0% {
+              opacity: 0;
+            }
+
+            10% {
+              opacity: 0;
+            }
+
+            20% {
+              opacity: 1;
+            }
+
+            45% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 0;
+            }
+          }
+
+          &.bootstrap-logo {
+            left: 90%;
+            bottom: 20%;
+          }
+
+          &.css-logo {
+            left: 85%;
+            bottom: 20%;
+          }
+
+          &.figma-logo {
+            left: 80%;
+            bottom: 15%;
+          }
+
+          &.github-logo {
+            left: 75%;
+            bottom: 14%;
+          }
+
+          &.git-logo {
+            left: 70%;
+            bottom: 9%;
+          }
+
+          &.html-logo {
+            left: 65%;
+            bottom: 9%;
+          }
+
+          &.js-logo {
+            left: 60%;
+            bottom: 5%;
+          }
+
+          &.react-logo {
+            left: 55%;
+            bottom: 9%;
+          }
+
+          &.sass-logo {
+            left: 50%;
+            bottom: 5%;
+          }
+
+          &.slack-logo {
+            left: 45%;
+            bottom: 7%;
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    animation: scroll-down infinite 1s;
+
+    @keyframes scroll-down {
+      100% {
+        bottom: 2%;
+      }
+    }
+  }
+}

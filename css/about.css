@@ -1,0 +1,150 @@
+/* Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* gothic-a1 */
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* font */
+/* color */
+/* pointcolor */
+/* grayScale */
+/* gradient */
+/* icon-color */
+/* title */
+/* box-shadow */
+/* button */
+/* project-stack */
+.about {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+.about .about-bg {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.about.on .about-title {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  position: relative;
+  margin-bottom: 135px;
+  font-weight: 700;
+}
+.about.on .about-title::after {
+  content: "";
+  position: absolute;
+  width: 237px;
+  height: 3px;
+  background-color: #E44D26;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  transition: width 1s;
+}
+.about.on .about-content {
+  opacity: 1;
+  transform: translate(0);
+}
+.about .about-title {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  position: relative;
+  margin-bottom: 135px;
+  font-weight: 700;
+}
+.about .about-title::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #E44D26;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  transition: width 1s;
+}
+.about .about-content {
+  width: 90%;
+  max-width: 1000px;
+  height: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(100px);
+  transition-duration: 0.5s;
+  transition-property: opacity, transform;
+  transition-delay: 0.4s;
+}
+.about .about-content .about-text {
+  border-radius: 20px;
+  padding: 10% 4%;
+}
+.about .about-content .about-text p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.about .about-content .about-text p.typing {
+  height: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.about .about-content .about-text p span {
+  display: block;
+  margin-left: 26px;
+}
+.about .about-content img {
+  width: 30%;
+  border-radius: 20px;
+}
+.about .icon-logo-wrap.on svg {
+  bottom: 10px;
+}
+.about .icon-logo-wrap svg {
+  position: absolute;
+  bottom: 100%;
+  transition: 1s;
+  z-index: 1000;
+}
+.about .icon-logo-wrap svg.bootstrap-logo {
+  right: 5%;
+}
+.about .icon-logo-wrap svg.css-logo {
+  right: 6%;
+  transition-delay: 0.1s;
+}
+.about .icon-logo-wrap svg.figma-logo {
+  right: 7%;
+  transition-delay: 0.2s;
+}
+.about .icon-logo-wrap svg.github-logo {
+  right: 8%;
+  transition-delay: 0.3s;
+}
+.about .icon-logo-wrap svg.git-logo {
+  right: 9%;
+  transition-delay: 0.4s;
+}
+.about .icon-logo-wrap svg.html-logo {
+  right: 10%;
+  transition-delay: 0.2s;
+}
+.about .icon-logo-wrap svg.js-logo {
+  right: 11%;
+  transition-delay: 0.1s;
+}
+.about .icon-logo-wrap svg.react-logo {
+  right: 12%;
+  transition-delay: 0.5s;
+}
+.about .icon-logo-wrap svg.sass-logo {
+  right: 13%;
+  transition-delay: 0.6s;
+}
+.about .icon-logo-wrap svg.slack-logo {
+  right: 14%;
+  transition-delay: 0.4s;
+}

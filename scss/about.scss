@@ -1,0 +1,136 @@
+@import "variables";
+
+.about {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+
+  .about-bg {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+
+  &.on {
+    .about-title {
+      @include title(135px, 237px);
+    }
+
+    .about-content {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+  .about-title {
+    @include title(135px, 0);
+  }
+
+  .about-content {
+    width: 90%;
+    max-width: 1000px;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(100px);
+    transition-duration: 0.5s;
+    transition-property: opacity, transform;
+    transition-delay: .4s;
+
+    .about-text {
+      border-radius: 20px;
+      padding: 10% 4%;
+    
+        p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+  
+        &.typing {
+          height: 30px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+  
+        span {
+          display: block;
+          margin-left: 26px;
+        }
+      }
+    }
+    img {
+      width: 30%;
+      border-radius: 20px;
+    }
+
+  }
+
+  .icon-logo-wrap {
+    &.on {
+      svg {
+        bottom: 10px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      bottom: 100%;
+      transition: 1s;
+      z-index: 1000;
+
+      &.bootstrap-logo {
+        right: 5%;
+      }
+
+      &.css-logo {
+        right: 6%;
+        transition-delay: 0.1s;
+      }
+
+      &.figma-logo {
+        right: 7%;
+        transition-delay: 0.2s;
+      }
+
+      &.github-logo {
+        right: 8%;
+        transition-delay: 0.3s;
+      }
+
+      &.git-logo {
+        right: 9%;
+        transition-delay: 0.4s;
+      }
+
+      &.html-logo {
+        right: 10%;
+        transition-delay: 0.2s;
+      }
+
+      &.js-logo {
+        right: 11%;
+        transition-delay: 0.1s;
+      }
+
+      &.react-logo {
+        right: 12%;
+        transition-delay: 0.5s;
+      }
+
+      &.sass-logo {
+        right: 13%;
+        transition-delay: 0.6s;
+      }
+
+      &.slack-logo {
+        right: 14%;
+        transition-delay: 0.4s;
+      }
+    }
+  }
+}

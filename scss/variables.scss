@@ -1,0 +1,120 @@
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+//  font-family: "Montserrat", sans-serif;
+/* gothic-a1 */
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+//  font-family: "Gothic A1", sans-serif;
+
+/* font */
+$font-kr : "Gothic A1",
+sans-serif;
+$font-en : "Montserrat",
+sans-serif;
+
+/* color */
+$black : black;
+$white : white;
+
+/* pointcolor */
+$point-color : #E44D26;
+
+/* grayScale */
+$gray01 : #565656;
+$gray02 : #B5B5B5;
+$gray03 : #696969;
+$gray04 : #A5A5A5;
+$gray05 : #999999;
+
+
+/* gradient */
+$gradient-white : linear-gradient(to bottom, #f9f9f9, #f4f4f4);
+$gradient-black : linear-gradient(to bottom, #101010, #222222);
+
+/* icon-color */
+$html : #E44D26;
+$css : #264DE4;
+$sass : #CD6799;
+$js : #FFDF00;
+$react : #00D8FF;
+$figma : #A259FF;
+$slack : #2EB67D;
+$jquery : #0768AD;
+
+/* title */
+@mixin title($marginBottom, $line-width) {
+  font-family: $font-en;
+  text-align: center;
+  position: relative;
+  margin-bottom: $marginBottom;
+  font-weight: 700;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: $line-width;
+    height: 3px;
+    background-color: $point-color;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+}
+
+/* box-shadow */
+@mixin darkShadow {
+  box-shadow: 0 0 15px rgba($color: $gray01, $alpha: 0.5) inset,
+    0 0 30px rgba($color: $gray02, $alpha: 0.4) inset,
+    0 0 15px rgba($color: $white, $alpha: 0.5);
+  background-color: $black;
+}
+
+@mixin whiteShadow {
+  box-shadow: 0 0 20px rgba($color: $black, $alpha: 0.1) inset,
+    0 0 10px rgba($color: $black, $alpha: 0.3);
+  background-color: $white;
+}
+
+/* button */
+@mixin whiteBtn {
+  border: 1px solid $black;
+  font-family: $font-en;
+  border-radius: 50px;
+  padding: 0.3rem;
+  background-color: transparent;
+  transition-duration: .3s;
+  transition-property: background, color;
+  font-weight: 500;
+  font-size: 0.875rem;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+@mixin blackBtn {
+  border: 1px solid $white;
+  font-family: $font-en;
+  border-radius: 50px;
+  padding: 0.3rem;
+  background-color: transparent;
+  transition-duration: .3s;
+  transition-property: background, color;
+  font-weight: 500;
+  font-size: 0.875rem;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}
+
+/* project-stack */
+@mixin stack {
+  text-transform: uppercase;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-family: $font-en;
+}

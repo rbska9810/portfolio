@@ -1,0 +1,420 @@
+@import "variables";
+
+.projects {
+  padding-top: 80px;
+  position: relative;
+
+  &.on {
+    .projects-title {
+      @include title(1rem, 343px);
+    }
+
+    .projects-inner {
+      .project-move {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+  }
+
+  .projects-title {
+    @include title(1rem, 0)
+  }
+
+  .projects-sub-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 150px;
+    font-family: $font-en;
+  }
+
+  .projects-inner {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+
+    .project-move {
+      width: 100%;
+      height: 500px;
+      position: relative;
+      opacity: 0;
+      transform: translateY(100px);
+      transition-duration: 0.5s;
+      transition-property: opacity, transform;
+      transition-delay: .4s;
+
+      .project-content-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        position: absolute;
+        left: 0;
+
+        &:nth-child(2) {
+          left: 100%;
+          transform: translateX(100px);
+        }
+
+        &:nth-child(3) {
+          left: 200%;
+          transform: translateX(200px);
+        }
+
+        img {
+          width: 670px;
+        }
+
+        .project-content {
+          width: 580px;
+          height: 411px;
+          border-radius: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 42px;
+
+          .content-left {
+            width: 45%;
+
+            p {
+              font-size: 0.875rem;
+              margin-bottom: 1rem;
+              line-height: 1.2;
+              margin-left: 1rem;
+
+              &:first-child {
+                margin-bottom: 0.5rem;
+                margin-left: 0;
+              }
+
+              &.stack {
+                display: flex;
+                gap: 5px;
+
+                span {
+                  display: block;
+                  @include stack;
+
+                  &:nth-child(1) {
+                    background-color: $html;
+                  }
+
+                  &:nth-child(2) {
+                    background-color: $css;
+                  }
+
+                  &:nth-child(3) {
+                    background-color: $js;
+                  }
+                }
+
+                &.stack02,
+                &.stack03 {
+                  span {
+                    &:nth-child(2) {
+                      background-color: $sass;
+                    }
+                  }
+                }
+              }
+            }
+
+            h4 {
+              font-weight: 600;
+              font-size: 1.563rem;
+              margin-bottom: 36px;
+              line-height: 1.3;
+            }
+
+            h5 {
+              font-weight: 600;
+              font-size: 1rem;
+              margin-bottom: 0.3rem;
+            }
+          }
+
+          .content-right {
+            width: 50%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .button-wrap {
+              display: flex;
+              justify-content: center;
+              gap: 2rem;
+            }
+
+            .project-description {
+              height: 75%;
+              padding-left: 1rem;
+              border-left: 2px solid $gray05;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.side-projects {
+  height: 100vh;
+  padding-top: 80px;
+
+  &.on {
+    .projects-title {
+      @include title(1rem, 343px);
+    }
+
+    .side-projects-inner {
+      .side-projects-slide {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+  }
+
+  .projects-title {
+    @include title(1rem, 0)
+  }
+
+  .side-projects-inner {
+    height: 100%;
+
+    .projects-sub-title {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 110px;
+      font-family: $font-en;
+    }
+
+    .side-projects-slide {
+      height: 365px;
+      opacity: 0;
+      transform: translateY(100px);
+      transition-duration: 0.5s;
+      transition-property: opacity, transform;
+      transition-delay: .4s;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        &::after {
+          color: $point-color;
+        }
+      }
+
+      .swiper-pagination {
+        top: 99%;
+
+        .swiper-pagination-progressbar-fill {
+          background-color: $point-color;
+        }
+      }
+
+      .swiper-slide {
+        height: 352px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        overflow: hidden;
+
+        &:hover .slide-black-bg {
+          top: 0;
+        }
+
+        .slide-black-bg {
+          height: 100%;
+          position: relative;
+          padding: 22px 20px 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-family: $font-en;
+          transition: top .5s;
+          top: 85%;
+
+          .slide-top {
+            .slide-title {
+              text-align: center;
+              font-weight: 600;
+              margin-bottom: 22px;
+            }
+
+            p {
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              margin-bottom: 1rem;
+              gap: 5px;
+              font-size: 0.875rem;
+
+              span {
+                display: block;
+                @include stack;
+              }
+            }
+          }
+
+          .slide-bottom {
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p {
+              font-size: 0.875rem;
+              line-height: 1.3;
+              font-weight: 600;
+            }
+
+            .slide-btn-wrap {
+              display: flex;
+              justify-content: center;
+              gap: 1rem;
+            }
+          }
+        }
+
+        &.all-in-one {
+          background-image: url(../images/all-in-one.png);
+
+          span:nth-child(1) {
+            background-color: $html;
+          }
+
+          span:nth-child(2) {
+            background-color: $sass;
+          }
+
+          span:nth-child(3) {
+            background-color: $js;
+          }
+        }
+
+        &.outdoor {
+          background-image: url(../images/outdoor.png);
+
+          span:nth-child(1) {
+            background-color: $html;
+          }
+
+          span:nth-child(2) {
+            background-color: $css;
+          }
+
+          span:nth-child(3) {
+            background-color: $js;
+          }
+        }
+
+        &.weather {
+          background-image: url(../images/weather.png);
+
+          span:nth-child(1) {
+            background-color: $react;
+          }
+
+          span:nth-child(2) {
+            background-color: $js;
+          }
+        }
+
+        &.homecheck {
+          background-image: url(../images/homecheck.png);
+
+          span:nth-child(1) {
+            background-color: $html;
+          }
+
+          span:nth-child(2) {
+            background-color: $css;
+          }
+
+          span:nth-child(3) {
+            background-color: $js;
+          }
+        }
+
+        &.mardi {
+          background-image: url(../images/mardi.png);
+
+          span:nth-child(1) {
+            background-color: $react;
+          }
+
+          span:nth-child(2) {
+            background-color: $js;
+          }
+        }
+
+        &.class101 {
+          background-image: url(../images/class101.png);
+
+          span:nth-child(1) {
+            background-color: $html;
+          }
+
+          span:nth-child(2) {
+            background-color: $sass;
+          }
+          span:nth-child(3) {
+            background-color: $jquery;
+          }
+        }
+
+        &.mammamia {
+          background-image: url(../images/mammamia.png);
+
+          span:nth-child(1) {
+            background-color: $html;
+          }
+
+          span:nth-child(2) {
+            background-color: $css;
+          }
+        }
+
+        &.gridweb {
+          background-image: url(../images/gridweb.png);
+
+          span:nth-child(1) {
+            background-color: $html;
+          }
+
+          span:nth-child(2) {
+            background-color: $css;
+          }
+        }
+
+        &.rockscissor {
+          background-image: url(../images/rockscissor.png);
+
+          span:nth-child(1) {
+            background-color: $react;
+          }
+
+          span:nth-child(2) {
+            background-color: $js;
+          }
+        }
+        &.adidas {
+          background-image: url(../images/react-adidas.png);
+
+          span:nth-child(1) {
+            background-color: $react;
+          }
+
+          span:nth-child(2) {
+            background-color: $js;
+          }
+        }
+      }
+    }
+  }
+}

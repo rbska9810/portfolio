@@ -1,0 +1,124 @@
+@import "variables";
+
+.contact {
+  padding-top: 80px;
+  height: 100vh;
+  overflow: hidden;
+
+  &.on {
+    .contact-title {
+      @include title(150px, 316px);
+    }
+
+    .contact-back {
+      opacity: 1;
+    }
+
+    form {
+      opacity: 1;
+    }
+  }
+
+  .contact-title {
+    @include title(0, 0);
+  }
+
+  .contact-back {
+    width: 768px;
+    height: 860px;
+    background-image: url(../images/contactBack.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+    transition-delay: .4s;
+  }
+
+  form {
+    width: 580px;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $black;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+    transition-delay: .4s;
+
+    .contact-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      input[type=email] {
+        width: 85%;
+        height: 35px;
+        border-bottom: 1px solid $black;
+        background-color: transparent;
+        outline: none;
+        font-size: 1.5rem;
+        font-family: $font-en;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+        font-weight: 600;
+
+        &:focus::placeholder {
+          opacity: 0;
+        }
+      }
+
+      button {
+        width: 13%;
+        height: 36px;
+        border: 1px solid $black;
+        background-color: transparent;
+        font-size: 1.25rem;
+        font-family: $font-en;
+        transition-duration: .2s;
+        transition-property: background, color;
+        font-weight: 600;
+
+        &:hover {
+          background-color: $black;
+          color: white;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 35%;
+      box-sizing: border-box;
+      outline: none;
+      background-color: transparent;
+      border: 1px solid $black;
+      font-size: 1.5rem;
+      font-family: $font-en;
+      padding: 0.5rem;
+      font-weight: 500;
+
+      &:focus::placeholder {
+        opacity: 0;
+      }
+    }
+    .gitHubLink {
+      display: block;
+      width: 44px;
+      height: 46px;
+      margin: 5% auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+  }
+
+}

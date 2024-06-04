@@ -1,0 +1,121 @@
+/* Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* gothic-a1 */
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* font */
+/* color */
+/* pointcolor */
+/* grayScale */
+/* gradient */
+/* icon-color */
+/* title */
+/* box-shadow */
+/* button */
+/* project-stack */
+.header {
+  width: 100%;
+  max-width: 1980px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .dark-mode-btn {
+  width: 110px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  margin-left: 26px;
+  margin-right: auto;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  padding: 0 3px;
+  cursor: pointer;
+  position: relative;
+}
+.header .dark-mode-btn .mode-title {
+  position: absolute;
+}
+.header .dark-mode-btn .mode-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .dark-mode-btn .mode-icon .black-mode-icon {
+  stroke: white;
+}
+.header .gnb {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+}
+.header .gnb a {
+  display: block;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.3rem 0;
+}
+.header .gnb a.on::after {
+  width: 100%;
+}
+.header .gnb a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #E44D26;
+  transition: 0.2s;
+}
+.header .gnb a:hover::after {
+  width: 100%;
+}
+.header .trigger {
+  display: none;
+  width: 50px;
+  height: 34px;
+  position: relative;
+}
+.header .trigger.on span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.header .trigger.on span:nth-child(2) {
+  opacity: 0;
+}
+.header .trigger.on span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+.header .trigger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+.header .trigger span:nth-child(1) {
+  top: 0;
+}
+.header .trigger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .trigger span:nth-child(3) {
+  bottom: 0;
+}

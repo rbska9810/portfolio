@@ -1,0 +1,560 @@
+@charset "UTF-8";
+/* Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* gothic-a1 */
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* font */
+/* color */
+/* pointcolor */
+/* grayScale */
+/* gradient */
+/* icon-color */
+/* title */
+/* box-shadow */
+/* button */
+/* project-stack */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+  body {
+    /* 모드변경 */
+  }
+  body.changeColor .header .gnb {
+    background-color: black;
+  }
+  body.changeColor .header .gnb a {
+    color: white;
+  }
+  /* header */
+  .header {
+    height: 80px;
+  }
+  .header .gnb {
+    width: 40%;
+    height: 100vh;
+    top: 0;
+    right: -40%;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 50px 0 0 50px;
+    transition: right 0.3s;
+  }
+  .header .gnb.on {
+    right: 0;
+  }
+  .header .gnb a {
+    color: black;
+  }
+  .header .trigger {
+    display: block;
+  }
+  /* intro */
+  .intro {
+    justify-content: center;
+  }
+  .intro .intro-left .intro-title {
+    font-size: 2rem;
+  }
+  .intro .intro-left p {
+    text-align: left;
+    font-size: 1.8rem;
+  }
+  .intro .intro-right {
+    display: none;
+  }
+  /* about */
+  .about {
+    height: auto;
+  }
+  .about .about-content {
+    height: auto;
+    margin-bottom: 135px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about .about-content .about-text p span {
+    display: inline;
+    margin-left: 0;
+  }
+  .about .about-content img {
+    width: 40%;
+  }
+  .about .icon-logo-wrap {
+    display: none;
+  }
+  /* skill */
+  .skill .skill-inner {
+    justify-content: center;
+  }
+  .skill .skill-inner .icon-logo-wrap {
+    display: none;
+  }
+  .skill .skill-inner .skill-content-wrap {
+    padding-right: 0;
+  }
+  .skill .skill-inner .skill-content-wrap .skill-content02, .skill .skill-inner .skill-content-wrap .skill-content03, .skill .skill-inner .skill-content-wrap .skill-content04, .skill .skill-inner .skill-content-wrap .skill-content05, .skill .skill-inner .skill-content-wrap .skill-content06, .skill .skill-inner .skill-content-wrap .skill-content07, .skill .skill-inner .skill-content-wrap .skill-content08, .skill .skill-inner .skill-content-wrap .skill-content09 {
+    transform: translateX(0);
+  }
+  /* projects */
+  .projects .projects-sub-title {
+    margin-bottom: 50px;
+  }
+  .projects .projects-inner {
+    height: inherit;
+    position: static;
+    padding-bottom: 150px;
+  }
+  .projects .projects-inner .project-move {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap:nth-child(2), .projects .projects-inner .project-move .project-content-wrap:nth-child(3) {
+    transform: translateX(0);
+  }
+  .projects .projects-inner .project-move .project-content-wrap img {
+    width: 90%;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content {
+    width: 80%;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-right .button-wrap {
+    justify-content: space-around;
+    gap: 0;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-right .button-wrap a {
+    padding: 0.5rem 0.7rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-right .project-description {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .side-projects {
+    height: auto;
+    padding-bottom: 150px;
+  }
+  /* contact */
+  .contact {
+    height: inherit;
+  }
+  .contact .contact-back {
+    width: 100%;
+    background-size: cover;
+  }
+  .contact form {
+    width: 60%;
+  }
+  .contact form .contact-top button {
+    font-size: 1rem;
+  }
+  .contact form textarea {
+    height: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  body .title {
+    font-size: 3.5rem;
+  }
+  /* header */
+  .header .trigger {
+    width: 40px;
+    height: 30px;
+  }
+  /* about */
+  .about.on .about-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 135px;
+    font-weight: 700;
+  }
+  .about.on .about-title::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .about .about-content {
+    width: 90%;
+  }
+  .about .about-content .about-text p {
+    font-size: 1.1rem;
+  }
+  /* skill */
+  .skill.on .skill-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 100px;
+    font-weight: 700;
+  }
+  .skill.on .skill-title::after {
+    content: "";
+    position: absolute;
+    width: 152px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .skill .skill-inner .skill-content-wrap {
+    padding-top: 0;
+  }
+  .skill .skill-inner .skill-content-wrap .skill-content {
+    height: 470px;
+    padding-top: 40px;
+  }
+  .skill .skill-inner .skill-content-wrap .skill-content h3 {
+    font-size: 1.6rem;
+  }
+  .skill .skill-inner .skill-content-wrap .skill-content p {
+    font-size: 1.2rem;
+  }
+  /* projects */
+  .projects.on .projects-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .projects.on .projects-title::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content {
+    width: 90%;
+    height: 360px;
+    padding: 0 30px;
+  }
+  .side-projects.on .projects-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .side-projects.on .projects-title::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  /* contact */
+  .contact.on .contact-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 150px;
+    font-weight: 700;
+  }
+  .contact.on .contact-title::after {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .contact .contact-back {
+    width: 90%;
+    height: 600px;
+  }
+  .contact form {
+    width: 370px;
+  }
+  .contact form .contact-top input[type=email] {
+    font-size: 1.2rem;
+  }
+  .contact form .contact-top button {
+    font-size: 0.8rem;
+  }
+  .contact form textarea {
+    font-size: 1.2rem;
+    height: 28%;
+  }
+  /* footer */
+  .footer p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 13px;
+  }
+  body .title {
+    font-size: 3rem;
+  }
+  /* header */
+  .header {
+    height: 60px;
+  }
+  .header .trigger {
+    width: 30px;
+    height: 20px;
+  }
+  /* intro */
+  .intro .intro-left .intro-title {
+    font-size: 1.8rem;
+  }
+  .intro .intro-left p {
+    font-size: 1.8rem;
+  }
+  /* about */
+  .about.on .about-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 135px;
+    font-weight: 700;
+  }
+  .about.on .about-title::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .about .about-content .about-text p {
+    font-size: 1.3rem;
+  }
+  /* skill */
+  .skill.on .skill-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 100px;
+    font-weight: 700;
+  }
+  .skill.on .skill-title::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .skill .skill-inner .skill-content-wrap .skill-content {
+    padding-top: 30px;
+  }
+  /* projects */
+  .projects.on .projects-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .projects.on .projects-title::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .projects .projects-inner .project-move .project-content-wrap img {
+    width: 100%;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content {
+    width: 100%;
+    height: 550px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 30px;
+    gap: 1rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-left {
+    width: 100%;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-left p {
+    font-size: 1.2rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-left h4 {
+    font-size: 2rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-left h5 {
+    font-size: 1.4rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-right {
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-right .button-wrap a {
+    padding: 0.7rem 1rem;
+    font-size: 1.1rem;
+  }
+  .projects .projects-inner .project-move .project-content-wrap .project-content .content-right .project-description {
+    padding-top: 1rem;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid #999999;
+  }
+  .side-projects.on .projects-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .side-projects.on .projects-title::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .side-projects .side-projects-inner {
+    width: 70%;
+  }
+  .side-projects .side-projects-inner .side-projects-slide .swiper-slide .slide-black-bg .slide-top .slide-title {
+    font-size: 1.5rem;
+  }
+  .side-projects .side-projects-inner .side-projects-slide .swiper-slide .slide-black-bg .slide-top p {
+    font-size: 1.1rem;
+  }
+  .side-projects .side-projects-inner .side-projects-slide .swiper-slide .slide-black-bg .slide-bottom p {
+    font-size: 1.1rem;
+  }
+  .side-projects .side-projects-inner .side-projects-slide .swiper-slide .slide-black-bg .slide-bottom .slide-btn-wrap a {
+    font-size: 1.1rem;
+    padding: 0.4rem 0.5rem;
+  }
+  /* contact */
+  .contact.on .contact-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    margin-bottom: 150px;
+    font-weight: 700;
+  }
+  .contact.on .contact-title::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background-color: #E44D26;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: width 1s;
+  }
+  .contact .contact-back {
+    width: 100%;
+    background-image: none;
+  }
+  .contact form {
+    width: 90%;
+    height: 50%;
+    box-sizing: border-box;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) inset, 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    border-radius: 20px;
+  }
+  .contact form textarea {
+    height: 70%;
+  }
+  /* footer */
+  .footer {
+    height: 60px;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* header */
+  .header {
+    height: 50px;
+  }
+  .header .logo {
+    width: 50px;
+    display: flex;
+  }
+  .header .logo svg {
+    width: 100%;
+  }
+  /* intro */
+  .intro .intro-left .intro-title {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+  .intro .intro-left .intro-title > div {
+    display: block;
+    width: 100%;
+  }
+  .intro .intro-left p {
+    font-size: 2rem;
+  }
+  /* skill */
+  .skill .skill-inner .skill-content-wrap .skill-content {
+    top: 10%;
+    height: 500px;
+  }
+  /* contact */
+  .contact form {
+    height: 70%;
+  }
+  .contact form .contact-top input[type=email] {
+    width: 80%;
+  }
+  .contact form .contact-top button {
+    width: 18%;
+  }
+  /* footer */
+  .footer p {
+    font-size: 0.8rem;
+  }
+}

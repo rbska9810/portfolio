@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "outDir": "./javaScript", //js파일 아웃풋 경로바꾸기
+      
+  }
+}
